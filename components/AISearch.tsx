@@ -3,7 +3,6 @@ import React, { useState } from "react";
 import { Input } from "./ui/input";
 import { Button } from "./ui/button";
 import { redirect } from "next/navigation";
-import ShowFilter from "./ShowFilter";
 
 function AISearch() {
   const handleAiSearch = async (formdata: FormData) => {
@@ -42,7 +41,6 @@ function AISearch() {
       </div>
 
       {/* <FilterSearch /> */}
-      <ShowFilter />
     </div>
   );
 }

@@ -2,6 +2,7 @@ import { DashboardLayout } from "@/components/DashboardLayout";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import CallLogs from "@/components/CallLogs";
 import { supabase } from "@/lib/supabase";
+import { Suspense } from "react";
 
 interface CallLog {
   id: string;
@@ -51,7 +52,9 @@ async function AIOutReachPage({
               {sampleCallLogs
                 .filter((call) => call.logs !== null)
                 .map((call: any) => (
-                  <CallLogs call={call} key={call.id} />
+                  <Suspense key={call.id} fallback={<h1>Loading</h1>}>
+                    <CallLogs call={call} />
+                  </Suspense>
                 ))}
             </div>
           </ScrollArea>
