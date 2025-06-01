@@ -18,7 +18,7 @@ async function createCall() {
 }
 
 const func1 = async () => {
-  const res = await fetch("http://localhost:3000/api/call", {
+  const res = await fetch(`${process.env.HOST_URL}/api/call`, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ to: "+917899158908" }),

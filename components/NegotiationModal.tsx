@@ -44,13 +44,15 @@ function NegotiationModal({
   });
 
   const aiWillCallInfluencerHandler = async () => {
-    const res = await fetch("http://localhost:3000/api/call", {
+    const res = await fetch(`${process.env.NEXT_PUBLIC_HOST_URL}/api/call`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ to: formData.phoneNumber }),
     });
 
     const data = await res.json();
+
+    console.log(data);
 
     return data;
   };

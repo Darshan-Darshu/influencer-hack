@@ -12,7 +12,7 @@ export async function POST(req: NextRequest): Promise<NextResponse> {
   try {
     const call = await client.calls.create({
       // url: `${process.env.NEXT_PUBLIC_BASE_URL}/api/voice`,
-      url: `https://7794b5c2-7c87-4b83-a537-427a1bec6b3e-00-2eht6w6nzdcyj.picard.replit.dev/incoming-call`,
+      url: `${process.env.REPLIT_URL}/incoming-call`,
       to,
       from: process.env.TWILIO_PHONE_NUMBER!,
     });

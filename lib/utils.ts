@@ -13,8 +13,6 @@ export function extractCreatorsArray(text: string) {
       throw new Error("Creators array not found in the text.");
     }
 
-    console.log(match);
-
     // Use eval to parse the matched array string safely
     const creatorsArray = eval(match[1]); // CAUTION: Use eval only in trusted environments
 

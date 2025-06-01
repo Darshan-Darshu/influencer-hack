@@ -16,7 +16,7 @@ import AIOutReachButton from "../AIOutReachButton";
 import ViewProfileButton from "../ViewProfileButton";
 
 async function ContentCreators({ query }: { query: string }) {
-  const res = await fetch("http://localhost:3000/api/search", {
+  const res = await fetch(`${process.env.HOST_URL}/api/search`, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ query }),
