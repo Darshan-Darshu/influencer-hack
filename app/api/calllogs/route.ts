@@ -12,7 +12,7 @@ export async function POST(req: NextRequest): Promise<NextResponse> {
       sid: body.sid,
     };
 
-    if (body.logs) {
+    if (body.data2) {
       await supabase.from("calllogs").insert(data);
     }
 
