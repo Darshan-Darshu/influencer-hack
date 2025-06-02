@@ -54,8 +54,8 @@ const navigationItems = [
     icon: CreditCard,
   },
   {
-    title: "Analytics",
-    url: "/analytics",
+    title: "App Info",
+    url: "/info",
     icon: BarChart3,
   },
 ];
